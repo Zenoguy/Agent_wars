@@ -50,3 +50,7 @@ Screenshots and layout checks are under `artifacts/qa`. Screenshot PNGs are igno
 ## Interpretation limits
 
 This is a curated comparative study, **not a controlled benchmark** or an audit of proprietary internals. Vendor safety/performance claims and selected incidents do not establish customer failure rates. Original benchmark abstracts and version metadata were reviewed; full experiments were not reproduced. Differing releases, harnesses, metrics and permissions preclude numerical rankings. Historic mechanism sources are explicitly dated and never identified as latest. Muse product controls do not automatically apply to the model API. No patent claims, fabricated scores or inferred deployment mechanisms are included.
+
+## Source-linked graphs
+
+The dashboard includes a publication-date plot of the ten dated 2026 references (not model performance), with a readable grouped timeline on mobile. A second vector graph explains the Muse product permission boundary documented in S13. Both derive from registered sources, use the report palette and local typography, and work without JavaScript. Hover/focus emphasis is subtle and honors reduced motion. No inferred numerical capability scores or external stock imagery are used. The coordinated two-page brief remains the concise printable summary.
