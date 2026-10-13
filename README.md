@@ -1,4 +1,4 @@
-# Agent Wars — The Reliability Frontier
+# Agent Wars | The Reliability Frontier
 
 An independent technology intelligence publication comparing publicly disclosed computer-use approaches from OpenAI, Anthropic, Google DeepMind and Meta. Two deliverables: the single-page dashboard at `/` and a coordinated **two-page A4 PDF** at `public/agent-wars-brief.pdf`. `/brief` is an export layout, not another research product.
 
@@ -62,3 +62,7 @@ Pushes to `main` run `.github/workflows/deploy.yml`: Node 24, `npm ci`, the exis
 The repository Pages custom domain is `agents.shreyanghosh.dev`. Its DNS CNAME is `agents → Zenoguy.github.io`; HTTPS is enforced after certificate approval. Account-level domain ownership verification is a separate GitHub Pages setting requiring GitHub’s generated TXT record. Actions deployments use the Pages setting directly and do not require a checked-in CNAME file.
 
 For a root-hosted local export, run `npm run build` and `python3 -m http.server 3001 --directory out`. `npm start` uses Python’s static file server because `next start` does not serve `output: export`; `npm run dev` remains the normal development preview. For deployment without the custom domain at the project URL, set `NEXT_PUBLIC_BASE_PATH=/Agent_wars` during the build.
+
+## Attribution and sharing
+
+The site and two-page brief credit Shreyan Ghosh and link to GitHub and LinkedIn. Open Graph and Twitter metadata use the 1200×630 `public/share-image.png`, with absolute URLs rooted at the custom domain. Both routes declare canonical URLs. The PDF explicitly labels its eight-entry bibliography as partial; every inline source tag remains clickable.

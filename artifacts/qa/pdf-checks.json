@@ -1,8 +1,10 @@
 {
   "pages": 2,
   "format": "A4",
-  "clickableExternalLinks": 53,
+  "clickableExternalLinks": 57,
   "allClaimSourceUrlsLinked": true,
   "executiveFindingTextParity": true,
-  "repeatedHeadersFooters": true
+  "repeatedHeadersFooters": true,
+  "authorAndProfileLinksBothPages": true,
+  "partialBibliographyExplained": true
 }
