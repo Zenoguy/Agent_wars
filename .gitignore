@@ -4,3 +4,4 @@ node_modules/
 next-env.d.ts
 artifacts/qa/*.png
 artifacts/qa/print-dashboard.pdf
+out/

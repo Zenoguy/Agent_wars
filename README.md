@@ -4,7 +4,7 @@ An independent technology intelligence publication comparing publicly disclosed 
 
 ## Run locally
 
-Requires Node.js 20.9+ and npm (verified with Node 26.10).
+Requires Node.js 20.9+ and npm (verified with Node 26.10). The optional static preview (`npm start`) uses Python 3.
 
 ```sh
 npm ci
@@ -54,3 +54,9 @@ This is a curated comparative study, **not a controlled benchmark** or an audit 
 ## Source-linked graphs
 
 The dashboard includes a publication-date plot of the ten dated 2026 references (not model performance), with a readable grouped timeline on mobile. A second vector graph explains the Muse product permission boundary documented in S13. Both derive from registered sources, use the report palette and local typography, and work without JavaScript. Hover/focus emphasis is subtle and honors reduced motion. No inferred numerical capability scores or external stock imagery are used. The coordinated two-page brief remains the concise printable summary.
+
+## GitHub Pages
+
+Pushes to `main` run `.github/workflows/deploy.yml`: Node 24, `npm ci`, the existing build command, and an upload/deploy of `out/`. Set repository **Settings → Pages → Source** to **GitHub Actions**. The workflow supplies `NEXT_PUBLIC_BASE_PATH=/Agent_wars` from the repository name, so bundles, local fonts and the PDF resolve under the project path. `out/brief/index.html` supports `/brief/`. `out/` is generated and ignored by Git.
+
+For a root-hosted local export, run `npm run build` and `python3 -m http.server 3001 --directory out`. `npm start` uses Python’s static file server because `next start` does not serve `output: export`; `npm run dev` remains the normal development preview. For a custom domain at its root, remove the workflow base-path environment value before rebuilding.
