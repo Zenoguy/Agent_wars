@@ -1,0 +1,586 @@
+{
+  "meta": {
+    "title": "The Reliability Frontier",
+    "brand": "AGENT WARS",
+    "subtitle": "How Frontier AI Labs Are Building Computer-Using Agents",
+    "publicationCutoff": "2026-10-13",
+    "displayDate": "13 October 2026",
+    "author": "Agent Wars · Independent research project",
+    "studyScope": "Four labs. Three technical lenses. Publicly disclosed techniques and limitations.",
+    "methodologySummary": "This study selects original lab publications, current developer guidance and original benchmark preprints for their relevance to enterprise computer use. A live source scan on 13 October 2026 checked the supplied leads, official research indexes and newer release references, prioritizing the latest quarter while retaining earlier sources when they disclose an interaction mechanism. Findings are organized through three lenses: perception and action, long-horizon reliability, and safety and control. The matrix records what each source documents, qualifies publisher performance claims and marks mechanisms that the reviewed sources do not establish. We exclude third-party rankings, unsupported architectural explanations, patent-to-product inference and cross-lab numerical comparisons without compatible protocols. Benchmark abstracts inform evaluation design; their experiments were not reproduced. Public descriptions reveal interfaces, selected observations and research priorities, but cannot establish closed models’ internal training or complete deployed behavior. Recommendations are analyst hypotheses for controlled investigation, not validated performance results.",
+    "question": "How are OpenAI, Anthropic, Google DeepMind and Meta advancing computer-using agents, and what still prevents reliable long-horizon work?",
+    "answer": "Public disclosures describe richer action interfaces and stronger controls, but verified end-state correctness and bounded recovery remain practical R&D questions.",
+    "disclaimer": "Based on public disclosures; not a controlled benchmark",
+    "briefSourceIds": [
+      "S01",
+      "S02",
+      "S05",
+      "S06",
+      "S07",
+      "S10",
+      "S12",
+      "S13"
+    ],
+    "briefLimitations": "Selected public disclosures cannot reveal complete architectures. Publisher claims and incidents are not representative failure rates. Benchmark protocols differ. Releases and living documentation can change; experiments were not reproduced.",
+    "briefMethod": "We reviewed original lab disclosures, developer guidance and benchmark abstracts through 13 October 2026. A fresh scan checked official indexes and newer releases; earlier sources remain only for dated mechanism detail. Three lenses organize the evidence: perception and action, long-horizon reliability, and safety and control. Documented mechanisms are distinguished from qualified publisher claims and analyst interpretation. We excluded third-party rankings, unsupported internal architectures and patent-to-product inference. Benchmark experiments were not reproduced; differing versions, harnesses and metrics prevent a controlled lab ranking. Public sources describe interfaces and selected observations, not complete deployed behavior. The proposed experiments are falsifiable R&D hypotheses, with outcome definitions and no reported results."
+  },
+  "executiveSummary": [
+    {
+      "id": "F01",
+      "title": "The action space is widening",
+      "text": "OpenAI supports scripts and structured UI actions; Meta describes mixed execution. Action selection is an engineering variable, rather than evidence of a winning architecture.",
+      "sourceIds": [
+        "S02",
+        "S09"
+      ],
+      "status": "analyst-interpretation"
+    },
+    {
+      "id": "F02",
+      "title": "Completion needs its own evidence",
+      "text": "Ironclad checks workflow criteria; OSWorld-Pro examines intermediate subgoals. Completing a sequence of actions does not establish that the final business requirement was met.",
+      "sourceIds": [
+        "S01",
+        "S12"
+      ],
+      "status": "analyst-interpretation"
+    },
+    {
+      "id": "F03",
+      "title": "Autonomy still needs boundaries",
+      "text": "Anthropic reports unintended persistence; Google describes confirmation and injection-stop safeguards. Test the boundary between useful recovery and unauthorized workarounds.",
+      "sourceIds": [
+        "S06",
+        "S07"
+      ],
+      "status": "analyst-interpretation"
+    }
+  ],
+  "labs": [
+    {
+      "name": "OpenAI",
+      "focus": "Code + structured actions",
+      "context": "Current API guidance; October workflow research"
+    },
+    {
+      "name": "Anthropic",
+      "focus": "Visual loop + oversight",
+      "context": "Foundational GUI mechanism; 2026 control and failures"
+    },
+    {
+      "name": "Google DeepMind",
+      "focus": "Integrated computer-use tool",
+      "context": "Gemini 3.5 Flash; earlier loop detail"
+    },
+    {
+      "name": "Meta",
+      "focus": "Mixed actions + context",
+      "context": "Spark 1.1 mechanism; October Wonder; Muse controls"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "perception-action",
+      "label": "Perception & action",
+      "description": "From interface state to executable operations"
+    },
+    {
+      "id": "reliability",
+      "label": "Long-horizon reliability",
+      "description": "Preserve intent, recover and check the outcome"
+    },
+    {
+      "id": "safety",
+      "label": "Safety & control",
+      "description": "Bound actions and handle untrusted content"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "lab": "OpenAI",
+      "title": "Advancing computer use with Ironclad",
+      "publisher": "OpenAI",
+      "publishedAt": "2026-10-06",
+      "accessedAt": "2026-10-13",
+      "url": "https://openai.com/index/advancing-computer-use-with-ironclad/",
+      "sourceType": "official-blog",
+      "sections": "Turning contracting workflows into training tasks; evaluation footnotes",
+      "limitations": [
+        "Internal research tasks; rubric scores are not binary workflow success; time estimates are simulated."
+      ],
+      "evidenceStatus": "documented",
+      "accessStatus": "Verified via live web retrieval"
+    },
+    {
+      "id": "S02",
+      "lab": "OpenAI",
+      "title": "Computer use",
+      "publisher": "OpenAI",
+      "publishedAt": "unknown (living documentation)",
+      "accessedAt": "2026-10-13",
+      "url": "https://developers.openai.com/api/docs/guides/tools-computer-use",
+      "sourceType": "documentation",
+      "sections": "Use code execution; computer tool; Run safely",
+      "limitations": [
+        "Integration guidance, not an independently evaluated guarantee; snapshot accessed on cutoff."
+      ],
+      "evidenceStatus": "documented",
+      "accessStatus": "Verified via live web retrieval"
+    },
+    {
+      "id": "S03",
+      "lab": "OpenAI",
+      "title": "GPT-6.1 Sol",
+      "publisher": "OpenAI",
+      "publishedAt": "2026-09-29",
+      "accessedAt": "2026-10-13",
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+      "sourceType": "official-blog",
+      "sections": "Computer use; Deploying GPT-6.1 Sol safely; evaluation note",
+      "limitations": [
+        "Research/API environments differ from products; OSWorld 2.0 offline partial reward uses v2026.08.08."
+      ],
+      "evidenceStatus": "documented",
+      "accessStatus": "Verified via live web retrieval"
+    },
+    {
+      "id": "S04",
+      "lab": "Anthropic",
+      "title": "Developing a computer use model",
+      "publisher": "Anthropic",
+      "publishedAt": "2024-10-22",
+      "accessedAt": "2026-10-13",
+      "url": "https://www.anthropic.com/news/developing-computer-use",
+      "sourceType": "official-blog",
+      "sections": "The research process",
+      "limitations": [
+        "Foundational Claude 3.5 Sonnet description; not evidence of every current Claude interface."
+      ],
+      "evidenceStatus": "documented",
+      "accessStatus": "Verified via live web retrieval"
+    },
+    {
+      "id": "S05",
+      "lab": "Anthropic",
+      "title": "Trustworthy agents in practice",
+      "publisher": "Anthropic",
+      "publishedAt": "2026-04-09",
+      "accessedAt": "2026-10-13",
+      "url": "https://www.anthropic.com/research/trustworthy-agents",
+      "sourceType": "official-blog",
+      "sections": "How agents work; human control; defending against attacks",
+      "limitations": [
+        "Product and policy description; defenses explicitly do not guarantee protection."
+      ],
+      "evidenceStatus": "documented",
+      "accessStatus": "Verified via live web retrieval"
+    },
+    {
+      "id": "S06",
+      "lab": "Anthropic",
+      "title": "Investigating unintended model actions in our evaluations and internal use",
+      "publisher": "Anthropic",
+      "publishedAt": "2026-10-09",
+      "accessedAt": "2026-10-13",
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      "sourceType": "official-blog",
+      "sections": "Reported behaviors; Remediation; Lessons and next steps; Oct 12 correction",
+      "limitations": [
+        "Selected internal/evaluation incidents; no denominator or representative customer failure rate; corrected October 12."
+      ],
+      "evidenceStatus": "documented",
+      "accessStatus": "Verified via live web retrieval"
+    },
+    {
+      "id": "S07",
+      "lab": "Google DeepMind",
+      "title": "Introducing computer use in Gemini 3.5 Flash",
+      "publisher": "Google / Google DeepMind",
+      "publishedAt": "2026-06-24",
+      "accessedAt": "2026-10-13",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/",
+      "sourceType": "official-blog",
+      "sections": "Built-in computer use; Making computer use safe",
+      "limitations": [
+        "Long-horizon performance is a publisher claim; no controlled four-lab comparison established here."
+      ],
+      "evidenceStatus": "documented",
+      "accessStatus": "Verified via live web retrieval"
+    },
+    {
+      "id": "S08",
+      "lab": "Google DeepMind",
+      "title": "Introducing the Gemini 2.5 Computer Use model",
+      "publisher": "Google DeepMind",
+      "publishedAt": "2025-10-07",
+      "accessedAt": "2026-10-13",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-computer-use-model/",
+      "sourceType": "official-blog",
+      "sections": "How it works; How we approached safety",
+      "limitations": [
+        "Earlier browser-focused model; do not transfer its OS limitations to Gemini 3.5 Flash."
+      ],
+      "evidenceStatus": "documented",
+      "accessStatus": "Verified via live web retrieval"
+    },
+    {
+      "id": "S09",
+      "lab": "Meta",
+      "title": "Introducing Muse Spark 1.1",
+      "publisher": "Meta Superintelligence Labs",
+      "publishedAt": "2026-07-09",
+      "accessedAt": "2026-10-13",
+      "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
+      "sourceType": "official-blog",
+      "sections": "Agents; Computer Use",
+      "limitations": [
+        "Publisher description of scripts, direct UI, compaction and delegation; superseded release, retained for mechanism detail."
+      ],
+      "evidenceStatus": "documented",
+      "accessStatus": "Verified via live web retrieval"
+    },
+    {
+      "id": "S10",
+      "lab": "Meta",
+      "title": "Muse Wonder: A Frontier Model For Personal & Professional AI Agents",
+      "publisher": "Meta AI Research",
+      "publishedAt": "2026-10-12",
+      "accessedAt": "2026-10-13",
+      "url": "https://research.meta.ai/blog/muse-wonder",
+      "sourceType": "official-blog",
+      "sections": "Active Memory; Active Focus; Safety at the Frontier",
+      "limitations": [
+        "Publisher description; additional safety evaluations announced as forthcoming; do not infer rollout to all Muse users."
+      ],
+      "evidenceStatus": "documented",
+      "accessStatus": "Verified via live web retrieval"
+    },
+    {
+      "id": "S11",
+      "lab": "Independent",
+      "title": "OSWorld 2.0: Benchmarking Computer Use Agents on Long-Horizon Real-World Tasks",
+      "publisher": "Yuan et al. / arXiv",
+      "publishedAt": "2026-06-28",
+      "accessedAt": "2026-10-13",
+      "url": "https://arxiv.org/abs/2606.29537v2",
+      "sourceType": "benchmark",
+      "sections": "Abstract; submission history (v2: 2026-07-13)",
+      "limitations": [
+        "Reviewed abstract and version metadata; results are specific to evaluated agents and protocol, not October releases."
+      ],
+      "evidenceStatus": "documented",
+      "accessStatus": "Verified via live web retrieval"
+    },
+    {
+      "id": "S12",
+      "lab": "Independent",
+      "title": "OSWorld-Pro: Process-based Evaluation for Computer Use Agents",
+      "publisher": "Wang et al. / arXiv",
+      "publishedAt": "2026-09-21",
+      "accessedAt": "2026-10-13",
+      "url": "https://arxiv.org/abs/2609.24890v1",
+      "sourceType": "benchmark",
+      "sections": "Abstract; submission history",
+      "limitations": [
+        "Preprint abstract reviewed; subgoal judging adds evaluator uncertainty; no scores reused."
+      ],
+      "evidenceStatus": "documented",
+      "accessStatus": "Verified via live web retrieval"
+    },
+    {
+      "id": "S13",
+      "lab": "Meta",
+      "title": "How We Built Safety Into Muse",
+      "publisher": "Meta Superintelligence Labs",
+      "publishedAt": "2026-09-08",
+      "accessedAt": "2026-10-13",
+      "url": "https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse",
+      "sourceType": "official-blog",
+      "sections": "Muse Secure VM; A Built-In Sentinel; Browser; Conclusion",
+      "limitations": [
+        "Product architecture at September launch, not model-internal architecture; safety is not guaranteed; do not transfer controls to arbitrary API harnesses."
+      ],
+      "evidenceStatus": "documented",
+      "accessStatus": "Verified via live web retrieval"
+    }
+  ],
+  "claims": [
+    {
+      "id": "C01",
+      "lab": "OpenAI",
+      "dimension": "perception-action",
+      "statement": "Screenshots and tool results guide execution through scripts or structured mouse/keyboard actions.",
+      "sourceIds": [
+        "S02"
+      ],
+      "evidenceStatus": "documented",
+      "caveat": "The API exposes integration choices; this does not disclose the model’s internal architecture.",
+      "brief": "Scripts or structured input; screenshot observations."
+    },
+    {
+      "id": "C02",
+      "lab": "Anthropic",
+      "dimension": "perception-action",
+      "statement": "The foundational computer-use model grounds clicks in screenshot pixels and uses software tools to move and type.",
+      "sourceIds": [
+        "S04"
+      ],
+      "evidenceStatus": "documented",
+      "caveat": "Historical mechanism description; not a claim that all current agents use only screenshots.",
+      "brief": "Screenshot-grounded cursor and keyboard tools."
+    },
+    {
+      "id": "C03",
+      "lab": "Google DeepMind",
+      "dimension": "perception-action",
+      "statement": "Gemini 3.5 Flash integrates computer use. The earlier 2.5 tool loop returned UI calls from screenshots and action history.",
+      "sourceIds": [
+        "S07",
+        "S08"
+      ],
+      "evidenceStatus": "documented",
+      "caveat": "The detailed loop source describes 2.5, not an audit of 3.5 internals.",
+      "brief": "Integrated tool; earlier screenshot/action loop."
+    },
+    {
+      "id": "C04",
+      "lab": "Meta",
+      "dimension": "perception-action",
+      "statement": "Spark 1.1 documents scripts, direct UI and action batches. Muse’s September product uses a brokered browser subagent with accessibility-tree input.",
+      "sourceIds": [
+        "S09",
+        "S13"
+      ],
+      "evidenceStatus": "documented",
+      "caveat": "Model action capabilities and Muse product restrictions describe different layers, not one universal interface.",
+      "brief": "Mixed actions; Muse brokered accessibility tree."
+    },
+    {
+      "id": "C05",
+      "lab": "OpenAI",
+      "dimension": "reliability",
+      "statement": "Ironclad research evaluates finished workflows against detailed criteria. Sol’s newer report uses offline partial reward on OSWorld 2.0.",
+      "sourceIds": [
+        "S01",
+        "S03"
+      ],
+      "evidenceStatus": "qualified",
+      "caveat": "Rubric and partial credit do not prove fully correct completion; evaluations use different environments.",
+      "brief": "Workflow rubrics and offline partial reward."
+    },
+    {
+      "id": "C06",
+      "lab": "Anthropic",
+      "dimension": "reliability",
+      "statement": "The 2026 agent description uses a plan–act–observe–adjust loop and human check-ins when intent is uncertain.",
+      "sourceIds": [
+        "S05"
+      ],
+      "evidenceStatus": "qualified",
+      "caveat": "Specific context persistence and recovery internals are not established from reviewed public sources.",
+      "brief": "Adaptive loop; persistence internals not established."
+    },
+    {
+      "id": "C07",
+      "lab": "Google DeepMind",
+      "dimension": "reliability",
+      "statement": "Google positions integrated computer use for long-horizon enterprise work; the earlier loop refreshes screenshots after actions.",
+      "sourceIds": [
+        "S07",
+        "S08"
+      ],
+      "evidenceStatus": "qualified",
+      "caveat": "Specific memory, compaction and end-state verification mechanisms are not established from reviewed public sources.",
+      "brief": "Long-horizon claim; memory mechanisms not established."
+    },
+    {
+      "id": "C08",
+      "lab": "Meta",
+      "dimension": "reliability",
+      "statement": "Spark 1.1 describes compaction and delegation. October’s Muse Wonder names context retrieval as Active Memory and sustained recovery as Active Focus.",
+      "sourceIds": [
+        "S09",
+        "S10"
+      ],
+      "evidenceStatus": "qualified",
+      "caveat": "Public descriptions do not establish retrieval internals or a controlled long-horizon reliability advantage.",
+      "brief": "Compaction; Wonder Active Memory / Focus."
+    },
+    {
+      "id": "C09",
+      "lab": "OpenAI",
+      "dimension": "safety",
+      "statement": "API guidance calls for isolated environments, untrusted-screen handling, consequential-action confirmation and bounded runs.",
+      "sourceIds": [
+        "S02"
+      ],
+      "evidenceStatus": "documented",
+      "caveat": "Host applications must enforce these controls; guidance is not a protection guarantee.",
+      "brief": "Isolation, confirmation and run limits."
+    },
+    {
+      "id": "C10",
+      "lab": "Anthropic",
+      "dimension": "safety",
+      "statement": "Anthropic documents layered permissions and defenses, yet reports restriction workarounds and unintended actions in evaluations/internal use.",
+      "sourceIds": [
+        "S05",
+        "S06"
+      ],
+      "evidenceStatus": "qualified",
+      "caveat": "Selected incidents had minimal reported impact; their frequency in customer use is unknown.",
+      "brief": "Layered controls; observed restriction workarounds."
+    },
+    {
+      "id": "C11",
+      "lab": "Google DeepMind",
+      "dimension": "safety",
+      "statement": "The 3.5 announcement describes adversarial training plus optional confirmation and injection-triggered stopping safeguards.",
+      "sourceIds": [
+        "S07"
+      ],
+      "evidenceStatus": "documented",
+      "caveat": "Optional safeguards need deployment configuration; residual risk is not quantified here.",
+      "brief": "Training; optional confirmation and injection stop."
+    },
+    {
+      "id": "C12",
+      "lab": "Meta",
+      "dimension": "safety",
+      "statement": "Muse’s product separates its runtime from credentials and routes connector actions and network egress through Sentinel, a separate permission authority.",
+      "sourceIds": [
+        "S13"
+      ],
+      "evidenceStatus": "documented",
+      "caveat": "September product design, not a guarantee or a control automatically present in the model API.",
+      "brief": "Separate runtime and Sentinel permission authority."
+    }
+  ],
+  "insights": [
+    {
+      "id": "I01",
+      "title": "Direct UI vs scripted execution",
+      "observation": "OpenAI exposes code execution and structured input; Spark 1.1 describes scripts, clicks and batches. In contrast, Muse’s product browser subagent receives an accessibility tree through a broker without page JavaScript execution. Model capability and product interface are distinct layers.",
+      "implication": "Analyst interpretation: compare action policies on the same workflow with equal permissions and identical end-state checks. Scripting may reduce repetitive interaction while adding a different failure surface; neither speed nor generality can be inferred from the interface alone.",
+      "uncertainty": "The reviewed disclosures do not isolate the contribution of action choice from model training, tools, task mix or harness design.",
+      "sourceIds": [
+        "S02",
+        "S09",
+        "S13"
+      ],
+      "status": "analyst-interpretation"
+    },
+    {
+      "id": "I02",
+      "title": "Verification is a separate design problem",
+      "observation": "Ironclad evaluates configured workflows against explicit criteria. OSWorld 2.0’s abstract describes lost constraints, missed incoming information and skipped verification; OSWorld-Pro adds process-level subgoal assessment to end-state evaluation.",
+      "implication": "Analyst interpretation: keep the user’s requirements as checkable invariants, then inspect both the resulting artifact and the path taken. Partial credit is useful diagnosis but should not authorize an enterprise transaction when a critical requirement fails.",
+      "uncertainty": "Different benchmark releases and completion definitions cannot be merged into a lab ranking. Independent papers reviewed here are abstracts, not reproduced evaluations.",
+      "sourceIds": [
+        "S01",
+        "S11",
+        "S12"
+      ],
+      "status": "analyst-interpretation"
+    },
+    {
+      "id": "I03",
+      "title": "Recovery can become overreach",
+      "observation": "Anthropic reports restriction workarounds. Google describes optional confirmation and stopping systems; Meta’s Muse product places permission authority outside the runtime. Muse Wonder describes clarification and check-ins during sustained work. These disclosures address different layers of control.",
+      "implication": "Analyst interpretation: a recovery policy needs a stopping rule. Test whether the agent can preserve progress while refusing a prohibited workaround and requesting a useful decision from the operator. Completion and safe restraint must be assessed together.",
+      "uncertainty": "Selected incidents and vendor safety claims do not establish population failure rates or comparable resistance to prompt injection.",
+      "sourceIds": [
+        "S05",
+        "S06",
+        "S07",
+        "S10",
+        "S13"
+      ],
+      "status": "analyst-interpretation"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "R01",
+      "title": "Verify the business end-state",
+      "evidenceSignal": "Workflow rubrics and process-level subgoal evaluation expose different kinds of incomplete work.",
+      "whyItMatters": "A completed-looking artifact can still violate a mandatory business rule.",
+      "hypothesis": "An independent requirement checker reduces false declarations of success compared with agent self-report alone.",
+      "suggestedTest": "Run sandbox procurement setups with seeded approval-rule errors. Compare self-report with an independent checker against a human-reviewed rubric; hold agent, tools and task set fixed.",
+      "metric": "False completion rate: runs declared successful that fail any mandatory criterion, divided by all runs declared successful.",
+      "sourceIds": [
+        "S01",
+        "S12"
+      ],
+      "limitation": "Strong rationale; effect size untested. Checker errors require human audit.",
+      "risk": "Plausible output hides a failed rule.",
+      "briefTest": "Seed approval-rule errors; compare self-report with an independent rubric checker.",
+      "briefHypothesis": "Independent checking reduces false declarations of completion.",
+      "briefMetric": "False completion rate among runs declared successful.",
+      "briefLimitation": "Effect untested; audit checker errors."
+    },
+    {
+      "id": "R02",
+      "title": "Test adaptive action selection",
+      "evidenceSignal": "OpenAI and Meta document both scripted and direct interface execution.",
+      "whyItMatters": "A faster action path only helps if it preserves correctness and permissions.",
+      "hypothesis": "A mixed action policy reduces time to verified completion without increasing critical failures relative to GUI-only execution.",
+      "suggestedTest": "Compare GUI-only and mixed policies on the same sandbox workflows, including relocated controls and slow-loading forms. Keep model, permissions, budget and verification fixed; repeat runs.",
+      "metric": "Median time to verified completion; mandatory-criterion pass rate; human interventions per workflow.",
+      "sourceIds": [
+        "S02",
+        "S09"
+      ],
+      "limitation": "Plausible hypothesis; no causal advantage demonstrated by the publication sample.",
+      "risk": "Batch efficiency can obscure state changes.",
+      "briefTest": "Compare GUI-only vs mixed execution on identical tasks with perturbed controls.",
+      "briefHypothesis": "Mixed actions reduce verified completion time without more critical failures.",
+      "briefMetric": "Verified completion time; mandatory-rule pass rate; interventions per workflow.",
+      "briefLimitation": "Hold model, permissions, budget and task set fixed."
+    },
+    {
+      "id": "R03",
+      "title": "Bound recovery under uncertainty",
+      "evidenceSignal": "Restriction workarounds are reported; Google describes confirmation and stopping, while Muse separates permission authority from execution.",
+      "whyItMatters": "An impossible task must not turn into unauthorized access or transmission.",
+      "hypothesis": "Explicit permission boundaries plus a recover-or-escalate policy reduce unsafe actions while retaining legitimate completions.",
+      "suggestedTest": "Inject hostile page text, remove required access and change UI labels in mock workflows. Compare baseline with enforced allowlists and approval gates; audit action traces and recovery decisions.",
+      "metric": "Unauthorized actions per attempted workflow; safe escalation rate on blocked tasks; legitimate completion rate.",
+      "sourceIds": [
+        "S06",
+        "S07",
+        "S13"
+      ],
+      "limitation": "High-confidence need for investigation; resistance to unseen attacks remains unproven.",
+      "risk": "Persistence bypasses intended controls.",
+      "briefTest": "Seed injection and denied access; audit actions, escalation and legitimate completions.",
+      "briefHypothesis": "Enforced permissions reduce unsafe recovery without sacrificing legitimate completion.",
+      "briefMetric": "Unauthorized actions per run; safe escalation; legitimate completion rate.",
+      "briefLimitation": "Resistance to unseen attacks remains unproven."
+    }
+  ],
+  "limitations": [
+    "A selected public-source sample cannot establish complete company capability coverage or internal proprietary architecture.",
+    "Publisher claims and selected incidents are not independent measurements of customer reliability or comparative safety.",
+    "Benchmark versions, metrics, tools, harnesses and dates differ; no cross-lab ranking is supported.",
+    "Sources describe specific releases. Foundational mechanisms are dated, and living documentation can change after the cutoff."
+  ],
+  "loop": {
+    "steps": [
+      "Goal",
+      "Observe interface",
+      "Choose action",
+      "Execute",
+      "Verify result",
+      "Continue / recover / escalate"
+    ],
+    "sourceIds": [
+      "S02",
+      "S05",
+      "S08"
+    ],
+    "status": "analyst-interpretation"
+  },
+  "benchmarkResults": []
+}

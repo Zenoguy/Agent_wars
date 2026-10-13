@@ -1,0 +1,31 @@
+{
+  "name": "agent-wars",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "npm run validate && next build --webpack",
+    "start": "next start --hostname 0.0.0.0",
+    "validate": "node scripts/validate-data.mjs",
+    "typecheck": "tsc --noEmit",
+    "pdf": "node scripts/export-pdf.mjs",
+    "qa": "node scripts/qa.mjs",
+    "qa:production": "node scripts/production-check.mjs"
+  },
+  "dependencies": {
+    "next": "16.4.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@fontsource/ibm-plex-mono": "^5.2.0",
+    "@fontsource/inter": "^5.2.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "playwright": "^1.58.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.9.0"
+  }
+}

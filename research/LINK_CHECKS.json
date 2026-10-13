@@ -1,0 +1,97 @@
+{
+  "checkedAt": "2026-10-13",
+  "method": "Live web tool retrieval and publication section review; shell status codes are not used as factual validation.",
+  "sources": [
+    {
+      "id": "S01",
+      "url": "https://openai.com/index/advancing-computer-use-with-ironclad/",
+      "titleVerified": "Advancing computer use with Ironclad",
+      "publishedAt": "2026-10-06",
+      "status": "Accessible via web retrieval"
+    },
+    {
+      "id": "S02",
+      "url": "https://developers.openai.com/api/docs/guides/tools-computer-use",
+      "titleVerified": "Computer use",
+      "publishedAt": "unknown (living documentation)",
+      "status": "Accessible via web retrieval"
+    },
+    {
+      "id": "S03",
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+      "titleVerified": "GPT-6.1 Sol",
+      "publishedAt": "2026-09-29",
+      "status": "Accessible via web retrieval"
+    },
+    {
+      "id": "S04",
+      "url": "https://www.anthropic.com/news/developing-computer-use",
+      "titleVerified": "Developing a computer use model",
+      "publishedAt": "2024-10-22",
+      "status": "Accessible via web retrieval"
+    },
+    {
+      "id": "S05",
+      "url": "https://www.anthropic.com/research/trustworthy-agents",
+      "titleVerified": "Trustworthy agents in practice",
+      "publishedAt": "2026-04-09",
+      "status": "Accessible via web retrieval"
+    },
+    {
+      "id": "S06",
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      "titleVerified": "Investigating unintended model actions in our evaluations and internal use",
+      "publishedAt": "2026-10-09",
+      "status": "Accessible via web retrieval"
+    },
+    {
+      "id": "S07",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/",
+      "titleVerified": "Introducing computer use in Gemini 3.5 Flash",
+      "publishedAt": "2026-06-24",
+      "status": "Accessible via web retrieval"
+    },
+    {
+      "id": "S08",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-computer-use-model/",
+      "titleVerified": "Introducing the Gemini 2.5 Computer Use model",
+      "publishedAt": "2025-10-07",
+      "status": "Accessible via web retrieval"
+    },
+    {
+      "id": "S09",
+      "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
+      "titleVerified": "Introducing Muse Spark 1.1",
+      "publishedAt": "2026-07-09",
+      "status": "Accessible via web retrieval"
+    },
+    {
+      "id": "S10",
+      "url": "https://research.meta.ai/blog/muse-wonder",
+      "titleVerified": "Muse Wonder: A Frontier Model For Personal & Professional AI Agents",
+      "publishedAt": "2026-10-12",
+      "status": "Accessible via web retrieval"
+    },
+    {
+      "id": "S11",
+      "url": "https://arxiv.org/abs/2606.29537v2",
+      "titleVerified": "OSWorld 2.0: Benchmarking Computer Use Agents on Long-Horizon Real-World Tasks",
+      "publishedAt": "2026-06-28",
+      "status": "Accessible via web retrieval"
+    },
+    {
+      "id": "S12",
+      "url": "https://arxiv.org/abs/2609.24890v1",
+      "titleVerified": "OSWorld-Pro: Process-based Evaluation for Computer Use Agents",
+      "publishedAt": "2026-09-21",
+      "status": "Accessible via web retrieval"
+    },
+    {
+      "id": "S13",
+      "url": "https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse",
+      "titleVerified": "How We Built Safety Into Muse",
+      "publishedAt": "2026-09-08",
+      "status": "Accessible via web retrieval"
+    }
+  ]
+}

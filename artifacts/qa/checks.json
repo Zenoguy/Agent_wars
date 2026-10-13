@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-13",
+  "results": [
+    {
+      "width": 1440,
+      "noOverflow": true,
+      "anchors": true,
+      "evidenceExpansion": true,
+      "pdfDownload": true
+    },
+    {
+      "width": 1024,
+      "noOverflow": true,
+      "anchors": true,
+      "evidenceExpansion": true,
+      "pdfDownload": true
+    },
+    {
+      "width": 768,
+      "noOverflow": true,
+      "anchors": true,
+      "evidenceExpansion": true,
+      "pdfDownload": true
+    },
+    {
+      "width": 390,
+      "noOverflow": true,
+      "anchors": true,
+      "evidenceExpansion": true,
+      "pdfDownload": true
+    }
+  ],
+  "browserErrors": [],
+  "findingsParity": true,
+  "pdfSelectedSourceCount": 8
+}
