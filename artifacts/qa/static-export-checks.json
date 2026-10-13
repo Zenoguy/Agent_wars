@@ -1,11 +1,12 @@
 {
   "staticExport": true,
-  "basePath": "/Agent_wars",
+  "basePath": "",
+  "customDomain": "agents.shreyanghosh.dev",
   "indexHtml": true,
   "briefIndexHtml": true,
   "pdfUnchanged": true,
   "pdfSHA256": "8ffea28ff4049aa36a57e346923328c243d445ff42592d6df420f6623550fadd",
   "fourViewportQA": true,
   "javascriptDisabledQA": true,
-  "fontPathsPrefixed": true
+  "fontPathsRootRelative": true
 }

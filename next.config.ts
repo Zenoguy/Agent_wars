@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
-  // GitHub project Pages uses /<repository>/; local development uses /.
+  // Custom-domain deployments and local previews serve from /.
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || "",
 };
 

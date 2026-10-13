@@ -57,6 +57,8 @@ The dashboard includes a publication-date plot of the ten dated 2026 references 
 
 ## GitHub Pages
 
-Pushes to `main` run `.github/workflows/deploy.yml`: Node 24, `npm ci`, the existing build command, and an upload/deploy of `out/`. Set repository **Settings → Pages → Source** to **GitHub Actions**. The workflow supplies `NEXT_PUBLIC_BASE_PATH=/Agent_wars` from the repository name, so bundles, local fonts and the PDF resolve under the project path. `out/brief/index.html` supports `/brief/`. `out/` is generated and ignored by Git.
+Pushes to `main` run `.github/workflows/deploy.yml`: Node 24, `npm ci`, the existing build command, and an upload/deploy of `out/`. Set repository **Settings → Pages → Source** to **GitHub Actions**. The deployment serves from `/` at `https://agents.shreyanghosh.dev`. `out/brief/index.html` supports `/brief/`, and the static PDF is served at `/agent-wars-brief.pdf`. `out/` is generated and ignored by Git.
 
-For a root-hosted local export, run `npm run build` and `python3 -m http.server 3001 --directory out`. `npm start` uses Python’s static file server because `next start` does not serve `output: export`; `npm run dev` remains the normal development preview. For a custom domain at its root, remove the workflow base-path environment value before rebuilding.
+The repository Pages custom domain is `agents.shreyanghosh.dev`. Its DNS CNAME is `agents → Zenoguy.github.io`; HTTPS is enforced after certificate approval. Account-level domain ownership verification is a separate GitHub Pages setting requiring GitHub’s generated TXT record. Actions deployments use the Pages setting directly and do not require a checked-in CNAME file.
+
+For a root-hosted local export, run `npm run build` and `python3 -m http.server 3001 --directory out`. `npm start` uses Python’s static file server because `next start` does not serve `output: export`; `npm run dev` remains the normal development preview. For deployment without the custom domain at the project URL, set `NEXT_PUBLIC_BASE_PATH=/Agent_wars` during the build.
